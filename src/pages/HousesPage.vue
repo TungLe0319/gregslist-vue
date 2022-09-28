@@ -24,6 +24,7 @@ export default {
       Pop.error(error)
     }
     
+    
 }
 getHouses()
       return{
