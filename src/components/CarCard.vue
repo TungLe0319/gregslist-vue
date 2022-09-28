@@ -25,10 +25,12 @@
 
 <script>
 import { Car } from "../models/Car.js";
+import { SellerProfile } from "../models/SellerProfile.js";
 
 export default {
   props:{
-car:{type:Car, required:true}
+car:{type:Car, required:true},
+seller:{type: SellerProfile, required:true}
   },
   setup(props){
     return {}

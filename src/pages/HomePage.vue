@@ -4,9 +4,7 @@
 
 <carCard v-for="car in cars" :key="car.id" :car="car"/>
 
-<!-- <houseCard v-for="h in houses" :key="h.id" :house="h" /> -->
 
-<!-- <jobCard  v-for="j in  jobs" :key="j.id" :job="j" /> -->
 
 </div> 
 
@@ -18,6 +16,7 @@ import { computed } from "@vue/reactivity"
 import { onBeforeMount, onMounted } from "vue"
 import { AppState } from "../AppState.js"
 import { carsService } from "../services/CarsService.js"
+import { classifiedService } from "../services/ClassifiedsService.js"
 import { housesService } from "../services/HousesService.js"
 import { jobsService } from "../services/JobsService.js"
 import Pop from "../utils/Pop.js"
@@ -25,19 +24,32 @@ import Pop from "../utils/Pop.js"
 export default {
 
   setup(){
-async function getCars(){
-  try {
-      await carsService.getCars()
-    } catch (error) {
-      console.error('[]',error)
-    Pop.error(error)
-    }
-}
+// async function getCars(){
+//   try {
+//       await carsService.getCars()
+//     } catch (error) {
+//       console.error('[]',error)
+//     Pop.error(error)
+//     }
+// }
 onMounted(()=>{
-  getCars()
-
+  // getCars()
+getClassifieds()
 })
 
+
+
+
+ async function getClassifieds(){
+try {
+    await classifiedService.getClassifieds()
+  } catch (error) {
+    console.error('[getClassifieds]',error)
+    Pop.error(error)
+  }
+    }
+
+ 
 //NOTE Don't load UNTIL I get my cars
 //  onBeforeMount(async () =>{
 //   await getCars()
@@ -45,31 +57,9 @@ onMounted(()=>{
 
 
 
-// async function getHouses(){
-//   try {
-//       await  housesService.getHouses()
-//     } catch (error) {
-//       console.error('[]',error)
-//       Pop.error(error)
-//     }
-    
-// }
-// getHouses()
-
-// async function getJobs(){
-//   try {
-//       await jobsService.getJobs()
-//     } catch (error) {
-//       console.error('[]',error)
-//       Pop.error(error)
-//     }
-// }
-// getJobs()
-
     return{
 cars:computed(()=> AppState.cars),
-houses:computed(() => AppState.houses),
-jobs:computed(() => AppState.jobs)
+
     }
   }
 }

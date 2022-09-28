@@ -6,12 +6,19 @@ export const AppState = reactive({
   /**@type {import('./models/Account.js').Account} */
   account: {},
   
-  /**@type {import('./models/Car').Car[]} */
+  /**@type {import('./models/Car.js').Car[]} */
   cars:[],
   
-  /**@type {import('./models/House').House[]} */
+  /**@type {import('./models/House.js').House[]} */
   houses:[],
 
-  /**@type {import('./models/Job').Job[]} */
-  jobs:[]
+  /**@type {import('./models/Job.js').Job[]} */
+  jobs:[],
+  
+  
+  /**@type {import('./models/SellerProfile.js').SellerProfile[]} */
+  seller:{},
+  
+  /**@type {import('./models/Classified.js').Classified[]} */
+  classifieds:[]
 })
