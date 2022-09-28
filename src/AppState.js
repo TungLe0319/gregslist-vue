@@ -16,8 +16,8 @@ export const AppState = reactive({
   jobs:[],
   
   
-  /**@type {import('./models/SellerProfile.js').SellerProfile[]} */
-  seller:{},
+  /**@type {import('./models/SellerProfile.js').SellerProfile | null} */
+  seller:null,
   
   /**@type {import('./models/Classified.js').Classified[]} */
   classifieds:[]

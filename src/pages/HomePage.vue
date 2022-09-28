@@ -1,8 +1,11 @@
 <template>
   <div class="container">
    <div class="row justify-content-center scrollme">
+<div class="col-lg-3 col-md-4">
+<!-- Passing in entire object that is comprised of Listing type, Listing/ Seller had to drill down -->
+  <carCard v-for="c in classified" :key="c.id" :car="c.listing" :seller="c.seller" />
 
-<carCard v-for="car in cars" :key="car.id" :car="car"/>
+</div>
 
 
 
@@ -61,7 +64,7 @@ try {
 
     return{
 cars:computed(()=> AppState.cars),
-
+classified: computed(()=> AppState.classifieds)
     }
   }
 }

@@ -9,6 +9,7 @@ export class Classified {
     this.listingType = data.listingType; //Car/house/Job
     this.sellerId = data.sellerId;
     this.listing = data.listing; //an entire Object car/house/job
+    
 this.seller = new SellerProfile(data.seller)
 
 
