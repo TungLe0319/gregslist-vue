@@ -10,5 +10,11 @@ class ClassifiedsService{
     AppState.classifieds = res.data.map(c=> new Classified(c))
     console.log(AppState.classifieds);
   }
+
+  async deleteClassified(id){
+const res = await api.delete(`api/classifieds/${id}`)
+AppState.classifieds = AppState.classifieds.filter(c => c.id != id)
+
+  }
 }
 export const classifiedService = new ClassifiedsService()
