@@ -24,16 +24,36 @@
 
 
 <script>
+import { onMounted } from "vue";
 import { Car } from "../models/Car.js";
 import { SellerProfile } from "../models/SellerProfile.js";
+import Pop from "../utils/Pop.js";
 
 export default {
   props:{
 car:{type:Car, required:true},
 seller:{type: SellerProfile, required:true}
   },
+
   setup(props){
-    return {}
+
+    onMounted(()=>{
+
+    })
+
+    return {
+async deleteClassified(){
+  try {
+    const yes = await Pop.confirm('You sure?')
+    
+      
+    } catch (error) {
+      console.error('[]',error)
+      Pop.error(error)
+    }
+}
+
+    }
   }
 }
 </script>
