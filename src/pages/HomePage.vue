@@ -24,6 +24,7 @@ import Pop from "../utils/Pop.js"
 export default {
 
   setup(){
+
 // async function getCars(){
 //   try {
 //       await carsService.getCars()
@@ -32,6 +33,7 @@ export default {
 //     Pop.error(error)
 //     }
 // }
+
 onMounted(()=>{
   // getCars()
 getClassifieds()
