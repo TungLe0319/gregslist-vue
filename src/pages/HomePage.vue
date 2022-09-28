@@ -15,6 +15,7 @@
 
 <script>
 import { computed } from "@vue/reactivity"
+import { onBeforeMount, onMounted } from "vue"
 import { AppState } from "../AppState.js"
 import { carsService } from "../services/CarsService.js"
 import { housesService } from "../services/HousesService.js"
@@ -32,27 +33,37 @@ async function getCars(){
     Pop.error(error)
     }
 }
-getCars()
+onMounted(()=>{
+  getCars()
 
-async function getHouses(){
-  try {
-      await  housesService.getHouses()
-    } catch (error) {
-      console.error('[]',error)
-      Pop.error(error)
-    }
+})
+
+//NOTE Don't load UNTIL I get my cars
+//  onBeforeMount(async () =>{
+//   await getCars()
+//  })
+
+
+
+// async function getHouses(){
+//   try {
+//       await  housesService.getHouses()
+//     } catch (error) {
+//       console.error('[]',error)
+//       Pop.error(error)
+//     }
     
-}
+// }
 // getHouses()
 
-async function getJobs(){
-  try {
-      await jobsService.getJobs()
-    } catch (error) {
-      console.error('[]',error)
-      Pop.error(error)
-    }
-}
+// async function getJobs(){
+//   try {
+//       await jobsService.getJobs()
+//     } catch (error) {
+//       console.error('[]',error)
+//       Pop.error(error)
+//     }
+// }
 // getJobs()
 
     return{

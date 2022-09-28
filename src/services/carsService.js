@@ -4,7 +4,7 @@ import { api } from "./AxiosService.js"
 
 class CarsService{
 
-
+//  /api/classifieds/listingType=Cars
   async getCars(){
     const res = await api.get('/api/cars')
     console.log(res.data);
