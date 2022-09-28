@@ -1,5 +1,5 @@
 <template>
-  <div class="job-card col-md-3 mx-2">
+  <div class="job-card col-md-3 m-2">
     <div class="card elevation-3 mx-4 my-2" style="width: 18rem">
      
       <div class="card-body">

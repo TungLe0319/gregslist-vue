@@ -4,6 +4,8 @@
   </header>
   <main>
     <router-view />
+
+    <offCanvasForm />
   </main>
  
 </template>

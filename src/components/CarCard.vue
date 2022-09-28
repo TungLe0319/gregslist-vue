@@ -1,5 +1,5 @@
 <template>
-  <div class="car-card col-md-3 mx-2">
+  <div class="car-card col-md-3 mx-2 position-relative">
  <div class="card   elevation-3 mx-4 my-2 " style="width:18rem;">
             <div class="d-flex justify-content-center">
               <img :src="car.imgUrl" alt=""
@@ -18,7 +18,7 @@
               </div>
             </div>
           </div>
-
+<div class="position-absolute end-50 top-0 bg-dark rounded p-2 selectable">{{car.price}}</div>
   </div>
 </template>
 

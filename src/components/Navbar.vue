@@ -20,15 +20,36 @@
       <ul class="navbar-nav me-auto">
         <li>
           <router-link
-            :to="{ name: 'About' }"
+            :to="{ name: 'Home' }"
             class="btn text-success lighten-30 selectable text-uppercase"
           >
-            About
+          Cars
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ name: 'Houses' }"
+            class="btn text-success lighten-30 selectable text-uppercase"
+          >
+            Houses
+          </router-link>
+        </li>
+        <li>
+          <router-link
+            :to="{ name: 'Jobs' }"
+            class="btn text-success lighten-30 selectable text-uppercase"
+          >
+            Jobs
           </router-link>
         </li>
       </ul>
+      <div class="me-3">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#formOffCanvas" aria-controls="formOffCanvas">
+  Add
+</button>
+      </div>
       <!-- LOGIN COMPONENT HERE -->
-      <Login />
+      <!-- <Login /> -->
     </div>
   </nav>
 </template>

@@ -32,7 +32,7 @@ async function getCars(){
     Pop.error(error)
     }
 }
-// getCars()
+getCars()
 
 async function getHouses(){
   try {
@@ -53,7 +53,7 @@ async function getJobs(){
       Pop.error(error)
     }
 }
-getJobs()
+// getJobs()
 
     return{
 cars:computed(()=> AppState.cars),
