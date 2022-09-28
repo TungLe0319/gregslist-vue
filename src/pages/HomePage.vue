@@ -4,9 +4,9 @@
 
 <carCard v-for="car in cars" :key="car.id" :car="car"/>
 
-<houseCard v-for="h in houses" :key="h.id" :house="h" />
+<!-- <houseCard v-for="h in houses" :key="h.id" :house="h" /> -->
 
-<jobCard  v-for="j in  jobs" :key="j.id" :job="j" />
+<!-- <jobCard  v-for="j in  jobs" :key="j.id" :job="j" /> -->
 
 </div> 
 
