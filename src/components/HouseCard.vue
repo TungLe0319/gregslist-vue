@@ -1,7 +1,7 @@
 <template>
   <div class="house-card col-md-3 mx-2 position-relative">
     <div class="card elevation-3 mx-4 my-2" style="width: 18rem">
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center"  >
         <img
           :src="house.imgUrl"
           alt=""

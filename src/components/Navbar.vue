@@ -42,14 +42,7 @@
             Jobs
           </router-link>
         </li>
-        <li>
-          <router-link
-            :to="{ name: 'Selected' }"
-            class="btn text-success lighten-30 selectable text-uppercase"
-          >
-            SelectedItem
-          </router-link>
-        </li>
+       
       </ul>
       <div class="me-3">
         <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#formOffCanvas" aria-controls="formOffCanvas">

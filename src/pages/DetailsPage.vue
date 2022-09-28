@@ -1,5 +1,5 @@
 <template>
-  <div class="selected-Page container-fluid">
+   <div class="details-page container-fluid">
     <div class="row mt-5 ms-2">
       <div class="col-md-6">
         <img
@@ -42,18 +42,7 @@
 </template>
 
 <script>
-import { onBeforeMount, onMounted } from "vue"
-import { classifiedService } from "../services/ClassifiedsService.js"
-
 export default {
-
-
-  setup(){
-   
-
-     return{
-
-     }
-   }
+  
 }
 </script>
