@@ -10,7 +10,7 @@
     <div class="card-body">
       <div>
         <img :src="seller.picture" :alt="seller?.name" :title="seller?.name" height="40" class="rounded-circle">
-        <i class="mdi mdi-minus-box fs-1"></i>
+        <i class="mdi mdi-minus-box fs-1" ></i>
       </div>
       <div class="d-flex justify-content-between">
         <h6>make: {{ car.make }}</h6>
